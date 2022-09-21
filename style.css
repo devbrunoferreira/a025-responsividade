@@ -29,9 +29,9 @@ section {
 @media screen and (min-width: 1200px){
   .container {
     display: grid;
-    grid-template-columns: 15vw 66vw 15vw;
+    grid-template-columns: 15vw 67vw 15vw;
     grid-template-rows: 98vh;
-    gap: 1%;
+    gap: 0.8%;
     margin: 0.4em;
     justify-content: center;
   }
@@ -64,9 +64,8 @@ section {
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
     gap: 1%;
-    margin: 0.5em;
+    margin: 0.3em;
   }
 
   #item-1 {
@@ -79,8 +78,8 @@ section {
 
   #item-2 {
     display: flex;
-    width: 98.5vw;
-    height: 16.5vh;
+    width: 98.7vw;
+    height: 17.5vh;
     grid-column: 1/3;
     grid-row: 2/3;
     justify-content: center;
@@ -89,13 +88,14 @@ section {
 
   #item-3 {
     display: flex;
-    width: 17.5vw;
+    width: 17.7 vw;
     height: 80vh;
     writing-mode: vertical-lr;
     justify-content: center;
     align-items: center;
   }
 }
+
 
 /* 3. O terceiro para telas de 800px ou menos. */
 
