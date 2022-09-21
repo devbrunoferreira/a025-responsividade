@@ -17,3 +17,116 @@
     background-color: #45525b;
   }
   
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+}
+
+/* 1 .O primeiro layout é para telas de 1200px ou mais de largura; */
+@media screen and (min-width: 1200px){
+  .container {
+    display: grid;
+    grid-template-columns: 15vw 66vw 15vw;
+    grid-template-rows: 98vh;
+    gap: 1%;
+    margin: 0.4em;
+    justify-content: center;
+  }
+
+  section {
+    writing-mode: vertical-lr;
+  }
+
+  #item-1 {
+    grid-column: 2/3;
+    grid-row: 1;
+    writing-mode: horizontal-tb;
+  }
+
+  #item-2 {
+    grid-column: 1/2;
+    grid-row: 1;
+  }
+
+  #item-3 {
+    grid-column: 3/4;
+    grid-row: 1;
+  }
+
+}
+
+/* 2. O segundo para telas entre 1200px e 800px de largura (considere 1000 como um ponto de quebra possível); */
+
+@media screen and (min-width: 800px) and (max-width:1200px){
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1%;
+    margin: 0.5em;
+  }
+
+  #item-1 {
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #item-2 {
+    display: flex;
+    width: 98.5vw;
+    height: 16.5vh;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #item-3 {
+    display: flex;
+    width: 17.5vw;
+    height: 80vh;
+    writing-mode: vertical-lr;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* 3. O terceiro para telas de 800px ou menos. */
+
+@media screen and (max-width: 799px){
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr) ;
+    gap: 1%;
+    margin: 1%;
+  }
+
+  #item-1 {
+    width: 98vw;
+    height: 75vh;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  #item-2 {
+    width: 48vw;
+    height: 22vh;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  #item-3 {
+    width: 48vw;
+    height: 22vh;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+}
